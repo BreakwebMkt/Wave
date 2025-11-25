@@ -50,35 +50,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Formulário de contato -> envia para WhatsApp
+// Formulário de contato -> WhatsApp
 const contactForm = document.getElementById('contactForm');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const formData = new FormData(contactForm);
-        const nome = formData.get('nome') || '';
-        const email = formData.get('email') || '';
-        const telefone = formData.get('telefone') || '';
-        const mensagem = formData.get('mensagem') || '';
-
-        const texto = `Olá, meu nome é ${nome}.
-E-mail: ${email}
-Telefone: ${telefone}
-
-Mensagem:
-${mensagem}`;
-
-        // mesmo número do botão flutuante
-        const whatsappUrl = `https://wa.me/5511983427447?text=${encodeURIComponent(texto)}`;
-
-        window.open(whatsappUrl, '_blank');
-
-        showToast('Você será redirecionado para o WhatsApp para finalizar o contato.');
-        contactForm.reset();
-    });
-}
 
 function showToast(message) {
     const toast = document.getElementById('toast');
@@ -89,6 +62,34 @@ function showToast(message) {
     setTimeout(() => {
         toast.classList.remove('show');
     }, 3000);
+}
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const nome = contactForm.nome.value.trim();
+        const email = contactForm.email.value.trim();
+        const telefone = contactForm.telefone.value.trim();
+        const mensagem = contactForm.mensagem.value.trim();
+
+        const texto = 
+`Olá, vim pelo site da WAVE Planejados.
+
+Nome: ${nome}
+Telefone: ${telefone}
+E-mail: ${email}
+
+Mensagem:
+${mensagem}`;
+
+        const url = 'https://wa.me/5511983427447?text=' + encodeURIComponent(texto);
+
+        window.open(url, '_blank');
+
+        showToast('Redirecionando para o WhatsApp...');
+        contactForm.reset();
+    });
 }
 
 // Validação simples visual
@@ -150,70 +151,59 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Carrossel de imagens full-width
-const carrossel = document.querySelector('.carrossel');
+// Carrossel full-screen (faixa-carrossel)
+const carrosselSection = document.querySelector('#faixa-carrossel');
+if (carrosselSection) {
+    const slides = carrosselSection.querySelectorAll('.slide');
+    const prev = carrosselSection.querySelector('.prev');
+    const next = carrosselSection.querySelector('.next');
 
-if (carrossel) {
-    const slides = carrossel.querySelectorAll('.carrossel-slide');
-    const dots = carrossel.querySelectorAll('.carrossel-dots button');
-    const prevBtn = carrossel.querySelector('.prev');
-    const nextBtn = carrossel.querySelector('.next');
-    
-    let currentSlide = 0;
-    let autoTimer;
+    let index = 0;
+    let timer;
 
-    function goToSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.toggle('active', i === index);
-        });
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === index);
-        });
-        currentSlide = index;
+    function showSlide(i) {
+        slides.forEach(s => s.classList.remove('active'));
+        slides[i].classList.add('active');
+        index = i;
     }
 
     function nextSlide() {
-        const nextIndex = (currentSlide + 1) % slides.length;
-        goToSlide(nextIndex);
+        const newIndex = (index + 1) % slides.length;
+        showSlide(newIndex);
     }
 
     function prevSlide() {
-        const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
-        goToSlide(prevIndex);
+        const newIndex = (index - 1 + slides.length) % slides.length;
+        showSlide(newIndex);
     }
 
     function startAuto() {
         stopAuto();
-        autoTimer = setInterval(nextSlide, 6000); // 6s entre as trocas
+        timer = setInterval(nextSlide, 6000);
     }
 
     function stopAuto() {
-        if (autoTimer) clearInterval(autoTimer);
+        if (timer) clearInterval(timer);
     }
 
-    if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
+    if (next) {
+        next.addEventListener('click', () => {
             nextSlide();
             startAuto();
         });
     }
 
-    if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
+    if (prev) {
+        prev.addEventListener('click', () => {
             prevSlide();
             startAuto();
         });
     }
 
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            goToSlide(index);
-            startAuto();
-        });
-    });
+    carrosselSection.addEventListener('mouseenter', stopAuto);
+    carrosselSection.addEventListener('mouseleave', startAuto);
 
     startAuto();
 }
-
 
 console.log('WAVE Planejados - Site carregado com sucesso!');
