@@ -83,7 +83,7 @@ E-mail: ${email}
 Mensagem:
 ${mensagem}`;
 
-        const url = 'https://wa.me/5511983427447?text=' + encodeURIComponent(texto);
+        const url = 'https://wa.me/5511939434466?text=' + encodeURIComponent(texto);
 
         window.open(url, '_blank');
 
@@ -150,60 +150,5 @@ window.addEventListener('scroll', () => {
         }
     });
 });
-
-// Carrossel full-screen (faixa-carrossel)
-const carrosselSection = document.querySelector('#faixa-carrossel');
-if (carrosselSection) {
-    const slides = carrosselSection.querySelectorAll('.slide');
-    const prev = carrosselSection.querySelector('.prev');
-    const next = carrosselSection.querySelector('.next');
-
-    let index = 0;
-    let timer;
-
-    function showSlide(i) {
-        slides.forEach(s => s.classList.remove('active'));
-        slides[i].classList.add('active');
-        index = i;
-    }
-
-    function nextSlide() {
-        const newIndex = (index + 1) % slides.length;
-        showSlide(newIndex);
-    }
-
-    function prevSlide() {
-        const newIndex = (index - 1 + slides.length) % slides.length;
-        showSlide(newIndex);
-    }
-
-    function startAuto() {
-        stopAuto();
-        timer = setInterval(nextSlide, 6000);
-    }
-
-    function stopAuto() {
-        if (timer) clearInterval(timer);
-    }
-
-    if (next) {
-        next.addEventListener('click', () => {
-            nextSlide();
-            startAuto();
-        });
-    }
-
-    if (prev) {
-        prev.addEventListener('click', () => {
-            prevSlide();
-            startAuto();
-        });
-    }
-
-    carrosselSection.addEventListener('mouseenter', stopAuto);
-    carrosselSection.addEventListener('mouseleave', startAuto);
-
-    startAuto();
-}
 
 console.log('WAVE Planejados - Site carregado com sucesso!');
