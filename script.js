@@ -27,6 +27,12 @@ if (mobileMenuBtn && mobileMenu) {
             mobileMenu.classList.remove('active');
         });
     });
+
+    // Fechar menu quando o mouse sair de cima do menu
+    mobileMenu.addEventListener('mouseleave', () => {
+        mobileMenuBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+    });
 }
 
 // Smooth Scroll para âncoras
@@ -133,7 +139,7 @@ if (telefoneInput) {
 // Destacar link ativo do menu conforme a rolagem
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-menu a, .mobile-menu a');
+    const navLinks = document.querySelectorAll('.mobile-menu a');
     
     let current = '';
     sections.forEach(section => {
@@ -145,10 +151,28 @@ window.addEventListener('scroll', () => {
     
     navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
+        const href = link.getAttribute('href');
+        if (href && href === `#${current}`) {
             link.classList.add('active');
         }
     });
 });
+
+// Acordeão dos diferenciais
+const diffHeaders = document.querySelectorAll('.diferencial-header');
+if (diffHeaders.length > 0) {
+    diffHeaders.forEach(headerEl => {
+        headerEl.addEventListener('click', () => {
+            const card = headerEl.parentElement;
+            const openCard = document.querySelector('.diferencial-card.open');
+
+            if (openCard && openCard !== card) {
+                openCard.classList.remove('open');
+            }
+
+            card.classList.toggle('open');
+        });
+    });
+}
 
 console.log('WAVE Planejados - Site carregado com sucesso!');
