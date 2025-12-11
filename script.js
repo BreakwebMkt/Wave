@@ -175,4 +175,46 @@ if (diffHeaders.length > 0) {
     });
 }
 
+// Carrossel automático da seção de fabricação
+const fabricSlides = document.querySelectorAll('.fabricacao-slide');
+const fabricDots = document.querySelectorAll('.fabricacao-dot');
+let fabricIndex = 0;
+
+function setFabricSlide(index) {
+    if (!fabricSlides.length) return;
+
+    fabricSlides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+
+    if (fabricDots.length) {
+        fabricDots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    }
+
+    fabricIndex = index;
+}
+
+if (fabricSlides.length > 0) {
+    let fabricInterval = setInterval(() => {
+        const nextIndex = (fabricIndex + 1) % fabricSlides.length;
+        setFabricSlide(nextIndex);
+    }, 5000); // troca a cada 5s
+
+    // Clique nos dots para navegar manualmente
+    if (fabricDots.length) {
+        fabricDots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                setFabricSlide(i);
+                clearInterval(fabricInterval);
+                fabricInterval = setInterval(() => {
+                    const nextIndex = (fabricIndex + 1) % fabricSlides.length;
+                    setFabricSlide(nextIndex);
+                }, 5000);
+            });
+        });
+    }
+}
+
 console.log('WAVE Planejados - Site carregado com sucesso!');

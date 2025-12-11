@@ -102,7 +102,7 @@ header nav {
 }
 
 .logo-img {
-    height: clamp(36px, 6vw, 60px);
+    height: clamp(10px, 2vw, 40px);
     width: auto;
     display: block;
 }
@@ -235,7 +235,7 @@ header nav {
     align-items: center;
     justify-content: center;
     position: relative;
-    background-image: url('imagens/cozinha.png');
+    background-image: url('imagens/home.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -384,6 +384,7 @@ header nav {
 /* Sobre */
 .sobre {
     padding: 5rem 0;
+        background: var(--muted);
 }
 
 .sobre-text {
@@ -476,6 +477,139 @@ header nav {
     color: var(--foreground);
     margin: 2rem 0 1.25rem;
 }
+
+
+/* Fabricação - carrossel simples horizontal */
+.fabricacao {
+    padding: 5rem 0;
+    background: var(--background);
+}
+
+.fabricacao-carousel {
+    position: relative;
+    max-width: 2000px; /* ou até remover o max-width pra usar a largura total do .container */
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 0.9rem;
+    box-shadow: var(--shadow-medium);
+    overflow: hidden;
+    padding: 1.5rem 1.5rem 2rem;
+}
+
+
+.fabricacao-slide {
+    display: none;
+    animation: fabricacao-fade 0.6s ease-in-out;
+}
+
+.fabricacao-slide.active {
+    display: block;
+}
+
+.fabricacao-slide-text {
+    margin-bottom: 1.2rem;
+}
+
+.fabricacao-slide-text h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--foreground);
+    margin-bottom: 0.4rem;
+}
+
+.fabricacao-slide-text p {
+    font-size: 0.98rem;
+    color: var(--muted-foreground);
+    line-height: 1.7;
+}
+
+.fabricacao-slide-image {
+    width: 100%;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: #000;
+}
+
+.fabricacao-slide-image img {
+    width: 100%;
+    height: 50vh;      /* pega quase a tela toda na vertical */
+    object-fit: cover; /* mantém a imagem proporcional, cortando só o excesso */
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .fabricacao-slide-image img {
+        height: 220px;
+    }
+}
+
+/* Controles do carrossel */
+.fabricacao-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(23, 67, 96, 0.85);
+    color: #fff;
+    border: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    transition: var(--transition);
+}
+
+.fabricacao-control:hover {
+    background: var(--secondary);
+    color: #222;
+}
+
+.fabricacao-prev {
+    left: 1rem;
+}
+
+.fabricacao-next {
+    right: 1rem;
+}
+
+/* Dots (indicadores) */
+.fabricacao-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.2rem;
+}
+
+.fabricacao-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    border: none;
+    background: var(--border);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.fabricacao-dot.active {
+    background: var(--primary);
+    transform: scale(1.2);
+}
+
+/* Animação de transição */
+@keyframes fabricacao-fade {
+    from {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 /* Fabricação / Acabamentos */
 .acabamentos {
@@ -598,7 +732,6 @@ header nav {
     gap: 1.2rem;
     width: 100%;
 }
-
 
 .diferencial-card {
     width: 100%;
@@ -1105,6 +1238,18 @@ header nav {
     .fabricacao-logos-track {
         padding-inline: 1.5rem;
         gap: 3rem;
+    }
+
+    .fabricacao-slide {
+        grid-template-columns: 1fr;
+    }
+
+    .fabricacao-slide-text {
+        padding: 2rem 1.75rem;
+    }
+
+    .fabricacao-slide-image {
+        min-height: 220px;
     }
 }
 

@@ -28,11 +28,10 @@
         <div class="mobile-menu" id="mobileMenu">
             <a href="#home">Home</a>
             <a href="#sobre">Sobre</a>
-            <a href="#portfolio">Portfólio</a>
             <a href="#fabricacao">Fabricação</a>
+            <a href="#acabamentos">Acabamentos</a>
             <a href="#diferenciais">Diferenciais</a>
-            <!-- Portfólio e Projetos levam para o mesmo bloco de portfólio -->
-            <a href="#portfolio">Projetos</a>
+            <a href="#portfolio">Portfólio</a>
             <a href="#contato" class="btn-contact-mobile">Entre em contato</a>
         </div>
     </header>
@@ -52,11 +51,31 @@
             <a href="https://wa.me/5511939434466?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20um%20projeto."
                class="btn-hero" target="_blank" rel="noopener">
                 <i class="bi bi-whatsapp"></i>
-                Entre em contato pelo Whats
+                Entre em contato pelo WhatsApp
             </a>
         </div>
         <div class="scroll-indicator">
             <div class="scroll-mouse"></div>
+        </div>
+    </section>
+
+    <!-- Tarja fina de serviços (prazo, garantia, condições) -->
+    <section id="servicos-strip" class="info-strip">
+        <div class="container">
+            <div class="info-strip-inner">
+                <span>Prazo de entrega alinhado com o cronograma da sua obra</span>
+                <span>★</span>
+                <span>Garantia estendida e acompanhamento pós-instalação</span>
+                <span>★</span>
+                <span>Condições de pagamento flexíveis, analisadas caso a caso</span>
+                <span>★</span>
+                <span>Prazo de entrega alinhado com o cronograma da sua obra</span>
+                <span>★</span>
+                <span>Garantia estendida e acompanhamento pós-instalação</span>
+                <span>★</span>
+                <span>Condições de pagamento flexíveis, analisadas caso a caso</span>
+                <span>★</span>
+            </div>
         </div>
     </section>
 
@@ -80,7 +99,7 @@
                             A <strong>WAVE Planejados</strong> nasceu pra acolher com o propósito de transformar o mercado de móveis planejados, tornando o ritual de compra em uma experiência aconchegante e cheia de significado. Nosso foco está na experiência: um atendimento saudável, transparente e duradouro. Com mais de uma década de atuação e cinco anos sem nenhuma avaliação negativa, unimos confiança e eficiência, respeitando o estilo de vida de cada cliente e otimizando seu tempo.
                         </p>
                         <p class="sobre-text">
-                            Além de um showroom moderno com mais de 600m² de área construída, também oferecemos atendimento online, garantindo conforto, praticidade e a mesma excelência em cada projeto.
+                            Além de um showroom moderno e diversificado com mais de 600m² de área construída, também oferecemos atendimento online, garantindo conforto, praticidade e a mesma excelência em cada projeto.
                         </p>
                         <br>
                         <h3>Nossos Diferenciais</h3>
@@ -133,182 +152,105 @@
             </div>
         </div>
     </section>
+</section>
 
-    <!-- Portfólio (antigos "Nossos Projetos") -->
-    <section id="portfolio" class="projetos">
-        <div class="container">
-            <div class="section-header">
-                <h2>Portfólio WAVE</h2>
-                <p>Conheça alguns dos ambientes que transformamos com nossos móveis planejados. Cada projeto é único e feito sob medida.</p>
+<div class="section-divider-wave">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path fill="#f5f7f9" d="M0,64L48,58.7C96,53,192,43,288,53.3C384,64,480,96,576,96C672,96,768,64,864,48C960,32,1056,32,1152,48C1248,64,1344,96,1392,112L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+    </svg>
+</div>
+
+<section id="fabricacao" class="fabricacao">
+
+<section id="fabricacao" class="fabricacao">
+    <div class="container">
+        <div class="section-header">
+            <h2>Fabricação</h2>
+            <p>
+                A WAVE Planejados trabalha com multimarcas selecionadas, parceiras que possuem mais de 30 anos de mercado
+                e um histórico sólido de qualidade. Da escolha da chapa à instalação, cada etapa é acompanhada de perto.
+            </p>
+        </div>
+
+        <!-- Carrossel simples: 1 slide por vez, horizontal -->
+        <div class="fabricacao-carousel">
+            <!-- Slide 1 -->
+            <div class="fabricacao-slide active">
+                <div class="fabricacao-slide-text">
+                    <h3>Processos de corte e precisão</h3>
+                    <p>
+                        Cortes automatizados, medidas exatas e conferência em todas as etapas garantem encaixe perfeito
+                        dos móveis no seu ambiente.
+                    </p>
+                </div>
+                <div class="fabricacao-slide-image">
+                    <img src="imagens/download (1).jpg" alt="Processo de corte na fábrica">
+                </div>
             </div>
 
-            <div class="projetos-grid">
-                <!-- Card 1 -->
-                <div class="projeto-card">
-                    <div class="projeto-flip">
-                        <div class="projeto-face projeto-front">
-                            <div class="projeto-image projeto-1">
-                                <div class="projeto-overlay">
-                                    <span class="projeto-category">Cozinhas</span>
-                                    <h3 class="projeto-title">Cozinha Moderna</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="projeto-face projeto-back">
-                            <img src="imagens/cozinha.png" alt="Cozinha moderna planejada WAVE">
-                        </div>
-                    </div>
-                    <div class="projeto-content">
-                        <p>Funcionalidade, fluxo bem pensado e acabamento que valoriza o ambiente inteiro.</p>
-                    </div>
+            <!-- Slide 2 -->
+            <div class="fabricacao-slide">
+                <div class="fabricacao-slide-text">
+                    <h3>Montagem e conferência de peças</h3>
+                    <p>
+                        As peças são conferidas antes de sair da fábrica, reduzindo retrabalho em obra e garantindo mais
+                        agilidade na instalação.
+                    </p>
                 </div>
+                <div class="fabricacao-slide-image">
+                    <img src="imagens/por-que-escolher-uma-fabrica-sustentavel-de-moveis.webp" alt="Conferência de peças produzidas">
+                </div>
+            </div>
 
-                <!-- Card 2 -->
-                <div class="projeto-card">
-                    <div class="projeto-flip">
-                        <div class="projeto-face projeto-front">
-                            <div class="projeto-image projeto-2">
-                                <div class="projeto-overlay">
-                                    <span class="projeto-category">Closets</span>
-                                    <h3 class="projeto-title">Closet Sofisticado</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="projeto-face projeto-back">
-                            <img src="imagens/closet.png" alt="Closet sofisticado WAVE">
-                        </div>
-                    </div>
-                    <div class="projeto-content">
-                        <p>Organização inteligente com foco em aproveitamento total de espaço.</p>
-                    </div>
+            <!-- Slide 3 -->
+            <div class="fabricacao-slide">
+                <div class="fabricacao-slide-text">
+                    <h3>Acabamento e detalhes finais</h3>
+                    <p>
+                        Acabamentos, bordas e ferragens são aplicados com cuidado para manter o padrão de qualidade
+                        que você vê no showroom.
+                    </p>
                 </div>
+                <div class="fabricacao-slide-image">
+                    <img src="imagens/images.jpg" alt="Detalhes de acabamento dos móveis">
+                </div>
+            </div>
 
-                <!-- Card 3 -->
-                <div class="projeto-card">
-                    <div class="projeto-flip">
-                        <div class="projeto-face projeto-front">
-                            <div class="projeto-image projeto-3">
-                                <div class="projeto-overlay">
-                                    <span class="projeto-category">Escritórios</span>
-                                    <h3 class="projeto-title">Home Office</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="projeto-face projeto-back">
-                            <img src="imagens/home office.png" alt="Home office planejado WAVE">
-                        </div>
-                    </div>
-                    <div class="projeto-content">
-                        <p>Ambientes pensados para produtividade, conforto e estética na mesma medida.</p>
-                    </div>
+            <!-- Slide 4 -->
+            <div class="fabricacao-slide">
+                <div class="fabricacao-slide-text">
+                    <h3>Pronto para instalação</h3>
+                    <p>
+                        Tudo sai da fábrica organizado por ambiente, facilitando a logística, diminuindo sujeira e
+                        agilizando a montagem na sua casa.
+                    </p>
                 </div>
+                <div class="fabricacao-slide-image">
+                    <img src="imagens/por-que-escolher-uma-fabrica-sustentavel-de-moveis.webp" alt="Peças prontas para instalação">
+                </div>
+            </div>
 
-                <!-- Card 4 -->
-                <div class="projeto-card">
-                    <div class="projeto-flip">
-                        <div class="projeto-face projeto-front">
-                            <div class="projeto-image projeto-4">
-                                <div class="projeto-overlay">
-                                    <span class="projeto-category">Salas</span>
-                                    <h3 class="projeto-title">Sala de Estar</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="projeto-face projeto-back">
-                            <img src="imagens/sala.png" alt="Sala de estar planejada WAVE">
-                        </div>
-                    </div>
-                    <div class="projeto-content">
-                        <p>Painéis, nichos e volumes que integram tecnologia, decoração e rotina.</p>
-                    </div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="projeto-card">
-                    <div class="projeto-flip">
-                        <div class="projeto-face projeto-front">
-                            <div class="projeto-image projeto-5">
-                                <div class="projeto-overlay">
-                                    <span class="projeto-category">Quartos</span>
-                                    <h3 class="projeto-title">Quarto Planejado</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="projeto-face projeto-back">
-                            <img src="imagens/quarto.png" alt="Quarto planejado WAVE">
-                        </div>
-                    </div>
-                    <div class="projeto-content">
-                        <p>Layout pensado para descanso, praticidade e sensação de aconchego.</p>
-                    </div>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="projeto-card">
-                    <div class="projeto-flip">
-                        <div class="projeto-face projeto-front">
-                            <div class="projeto-image projeto-6">
-                                <div class="projeto-overlay">
-                                    <span class="projeto-category">Banheiros</span>
-                                    <h3 class="projeto-title">Banheiro Elegante</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="projeto-face projeto-back">
-                            <img src="imagens/banheiro.png" alt="Banheiro elegante planejado WAVE">
-                        </div>
-                    </div>
-                    <div class="projeto-content">
-                        <p>Marcenaria sob medida para otimizar cada centímetro do espaço.</p>
-                    </div>
-                </div>
+            <div class="fabricacao-dots">
+                <button class="fabricacao-dot active" data-index="0"></button>
+                <button class="fabricacao-dot" data-index="1"></button>
+                <button class="fabricacao-dot" data-index="2"></button>
+                <button class="fabricacao-dot" data-index="3"></button>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Fabricação (acabamentos + carrossel de logos) -->
-    <section id="fabricacao" class="acabamentos">
+
+
+    <!-- ACABAMENTOS: seção separada -->
+    <section id="acabamentos" class="acabamentos">
         <div class="container">
             <div class="section-header">
-                <h2>Fabricação e acabamentos</h2>
+                <h2>Acabamentos</h2>
                 <p>
-                    A WAVE Planejados trabalha com multimarcas selecionadas, parceiras que possuem mais de 30 anos de mercado
-                    e um histórico sólido de qualidade. Isso nos permite unir tecnologia, precisão de corte e variedade de
-                    materiais, sempre com o mesmo objetivo: entregar um móvel que faça sentido para a sua rotina e dure muitos anos.
+                    Trabalhamos com uma variedade de materiais e acabamentos para adaptar o seu projeto ao seu estilo,
+                    à sua rotina e ao nível de sofisticação que você busca.
                 </p>
-            </div>
-
-            <!-- Carrossel horizontal de logos (com espaçamento para sensação de mais marcas) -->
-            <div class="fabricacao-logos">
-                <div class="fabricacao-logos-track">
-                    <!-- 4 logos reais -->
-                    <div class="fabricacao-logo-item">
-                        <img src="imagens/logo-fabrica.png" alt="Parceiro 1">
-                    </div>
-                    <div class="fabricacao-logo-item">
-                        <img src="imagens/logo-fabrica.png" alt="Parceiro 2">
-                    </div>
-                    <div class="fabricacao-logo-item">
-                        <img src="imagens/logo-fabrica.png" alt="Parceiro 3">
-                    </div>
-                    <div class="fabricacao-logo-item">
-                        <img src="imagens/logo-fabrica.png" alt="Parceiro 4">
-                    </div>
-
-                    <!-- repetição para criar efeito de carrossel contínuo -->
-                    <div class="fabricacao-logo-item">
-                        <img src="imagens/logo-fabrica.png" alt="Parceiro 1">
-                    </div>
-                    <div class="fabricacao-logo-item">
-                        <img src="imagens/logo-fabrica.png" alt="Parceiro 2">
-                    </div>
-                    <div class="fabricacao-logo-item">
-                        <img src="imagens/logo-fabrica.png" alt="Parceiro 3">
-                    </div>
-                    <div class="fabricacao-logo-item">
-                        <img src="imagens/logo-fabrica.png" alt="Parceiro 4">
-                    </div>
-                </div>
             </div>
 
             <div class="acabamentos-grid">
@@ -320,7 +262,7 @@
                         </svg>
                     </div>
                     <h3>MDF e MDP</h3>
-                    <p>Materiais de alta qualidade com acabamento perfeito e durabilidade excepcional.</p>
+                    <p>Diversidade de cores e texturas, materiais de alta qualidade com acabamento perfeito e durabilidade excepcional.</p>
                 </div>
 
                 <div class="acabamento-card">
@@ -359,8 +301,8 @@
                             <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
                         </svg>
                     </div>
-                    <h3>Alumínio</h3>
-                    <p>Modernidade e resistência com perfis de alumínio de primeira linha.</p>
+                    <h3>Metalon</h3>
+                    <p>Modernidade e autenticidade com perfis de Metalon de primeira linha.</p>
                 </div>
 
                 <div class="acabamento-card">
@@ -469,22 +411,128 @@
         </div>
     </section>
 
-    <!-- Faixas full-screen com imagens (respiros visuais) -->
-    <section id="faixa-processos" class="faixa-full"></section>
-    <section id="faixa-produtos" class="faixa-full"></section>
-    <section id="faixa-entrega" class="faixa-full"></section>
-    <section id="faixa-compra" class="faixa-full"></section>
-
-    <!-- Tarja fina de serviços (prazo, garantia, condições) -->
-    <section id="servicos-strip" class="info-strip">
+    <!-- Portfólio (antigos "Nossos Projetos") -->
+    <section id="portfolio" class="projetos">
         <div class="container">
-            <div class="info-strip-inner">
-                <span>Prazo de entrega alinhado com o cronograma da sua obra</span>
-                <span>Garantia estendida e acompanhamento pós-instalação</span>
-                <span>Condições de pagamento flexíveis, analisadas caso a caso</span>
-                <span>Prazo de entrega alinhado com o cronograma da sua obra</span>
-                <span>Garantia estendida e acompanhamento pós-instalação</span>
-                <span>Condições de pagamento flexíveis, analisadas caso a caso</span>
+            <div class="section-header">
+                <h2>Projetos WAVE</h2>
+                <p>Conheça alguns dos ambientes que transformamos com nossos móveis planejados. Cada projeto é único e feito sob medida.</p>
+            </div>
+
+            <div class="projetos-grid">
+                <!-- Card 1 -->
+                <div class="projeto-card">
+                    <div class="projeto-flip">
+                        <div class="projeto-face projeto-front">
+                            <div class="projeto-image projeto-1">
+                                <div class="projeto-overlay">
+                                    <h3 class="projeto-title">Cozinha</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projeto-face projeto-back">
+                            <img src="imagens/cozinha.png" alt="Cozinha moderna planejada WAVE">
+                        </div>
+                    </div>
+                    <div class="projeto-content">
+                        <p>Funcionalidade, fluxo bem pensado e acabamento que valoriza o ambiente inteiro.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="projeto-card">
+                    <div class="projeto-flip">
+                        <div class="projeto-face projeto-front">
+                            <div class="projeto-image projeto-2">
+                                <div class="projeto-overlay">
+                                    <h3 class="projeto-title">Closet</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projeto-face projeto-back">
+                            <img src="imagens/closet.png" alt="Closet sofisticado WAVE">
+                        </div>
+                    </div>
+                    <div class="projeto-content">
+                        <p>Organização inteligente com foco em aproveitamento total de espaço.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="projeto-card">
+                    <div class="projeto-flip">
+                        <div class="projeto-face projeto-front">
+                            <div class="projeto-image projeto-3">
+                                <div class="projeto-overlay">
+                                    <h3 class="projeto-title">Escritório</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projeto-face projeto-back">
+                            <img src="imagens/home office.png" alt="Home office planejado WAVE">
+                        </div>
+                    </div>
+                    <div class="projeto-content">
+                        <p>Ambientes pensados para produtividade, conforto e estética na mesma medida.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="projeto-card">
+                    <div class="projeto-flip">
+                        <div class="projeto-face projeto-front">
+                            <div class="projeto-image projeto-4">
+                                <div class="projeto-overlay">
+                                    <h3 class="projeto-title">Sala de Estar</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projeto-face projeto-back">
+                            <img src="imagens/sala.png" alt="Sala de estar planejada WAVE">
+                        </div>
+                    </div>
+                    <div class="projeto-content">
+                        <p>Painéis, nichos e volumes que integram tecnologia, decoração e rotina.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="projeto-card">
+                    <div class="projeto-flip">
+                        <div class="projeto-face projeto-front">
+                            <div class="projeto-image projeto-5">
+                                <div class="projeto-overlay">
+                                    <h3 class="projeto-title">Quarto</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projeto-face projeto-back">
+                            <img src="imagens/quarto.png" alt="Quarto planejado WAVE">
+                        </div>
+                    </div>
+                    <div class="projeto-content">
+                        <p>Layout pensado para descanso, praticidade e sensação de aconchego.</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="projeto-card">
+                    <div class="projeto-flip">
+                        <div class="projeto-face projeto-front">
+                            <div class="projeto-image projeto-6">
+                                <div class="projeto-overlay">
+                                    <h3 class="projeto-title">Banheiro</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projeto-face projeto-back">
+                            <img src="imagens/banheiro.png" alt="Banheiro elegante planejado WAVE">
+                        </div>
+                    </div>
+                    <div class="projeto-content">
+                        <p>Marcenaria sob medida para otimizar cada centímetro do espaço.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -544,9 +592,10 @@
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#portfolio">Portfólio</a></li>
                         <li><a href="#fabricacao">Fabricação</a></li>
+                        <li><a href="#acabamentos">Acabamentos</a></li>
                         <li><a href="#diferenciais">Diferenciais</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
                         <li><a href="#contato">Entre em contato</a></li>
                     </ul>
                 </div>
